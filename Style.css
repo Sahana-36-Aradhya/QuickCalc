@@ -9,17 +9,16 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Full-screen calculator */
 .Calculator {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
     padding: 20px;
     width: 280px;
+    /* Ensures it doesn't overflow the screen on mobile devices */
     max-width: 100%;
 }
 
-/* Display styles */
 #display {
     width: 100%;
     height: 50px;
@@ -32,14 +31,12 @@ body {
     border-radius: 5px;
 }
 
-/* Buttons grid */
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
 }
 
-/* Button styles */
 button {
     font-size: 1.5em;
     padding: 20px;
@@ -74,28 +71,24 @@ button[data-value="/"], button[data-value="*"], button[data-value="-"], button[d
     color: white;
 }
 
-/* Full-screen view for mobile */
+/* Responsive design for smaller screens */
 @media (max-width: 600px) {
     body {
-        flex-direction: column; /* Adjust alignment for full-screen */
-        height: 100vh; /* Set full height */
-        margin: 0;
+        height: auto; /* Allow height to adjust based on content */
+        padding: 10px;
     }
 
     .Calculator {
-        width: 100%; /* Take full width */
-        height: 100vh; /* Take full height */
-        border-radius: 0; /* Remove rounded corners */
+        width: 100%;
         padding: 10px;
-        box-sizing: border-box; /* Ensure padding is included in width/height */
     }
 
     #display {
-        font-size: 2em; /* Keep font size consistent */
+        font-size: 1.8em; /* Adjust font size for mobile */
     }
 
     button {
-        font-size: 1.5em;
-        padding: 15px; /* Adjust padding for better usability */
+        font-size: 1.3em; /* Adjust button size for mobile */
+        padding: 15px;
     }
 }
